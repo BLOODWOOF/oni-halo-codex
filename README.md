@@ -1,33 +1,25 @@
 # Section III Archival Terminal
 
-Public, static Halo lore reference site styled like an ONI terminal.
+A Halo lore archive interface styled after an ONI terminal/database. The project presents a searchable collection of records with classification labels, archive sectors, visual reference panels, and a terminal-style authentication flow.
 
-## What is included
-- Static site only: `index.html`, `style.css`, `app.js`, `app-data.js`, and `assets/`
-- Public-safe packaged archive data embedded in `app-data.js`
-- ONI visual branding plus original diagrams and section banners
-- No raw archive text directory exposed in the public package
-- Internal build notes removed from the public site
+## Features
 
-## Publish on GitHub Pages
-1. Create a new **public** GitHub repository.
-2. Upload all files from this folder to the root of the repository.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-5. Choose the `main` branch and `/ (root)` folder, then save.
-6. Wait for GitHub Pages to publish your site.
+- Searchable lore records
+- Category and sector browsing
+- ONI-inspired terminal interface
+- Boot/authentication screen
+- Session-based classified record access prompts
+- Timeline, faction, installation, source, and Spartan program diagrams
+- Responsive layout for desktop and smaller screens
 
-Your site URL will usually be:
+## Project Files
 
-```
-https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/
-```
+- `index.html` — main terminal page
+- `terminal.css` — interface styling
+- `terminal.js` — terminal behavior and archive controls
+- `records.js` — archive record data
+- `assets/` — logos, banners, and diagrams
 
-## Notes
-- This site is presented as an **unofficial fan archive**.
-- The public package intentionally excludes internal build notes and the raw `archive/` source folder.
-- If you want a custom domain later, add a `CNAME` file and configure it in GitHub Pages settings.
+## Scope
 
-
-## V2.2 visible check
-After uploading, the top-right status bar should show `BUILD: V2.2 PUBLIC`, and the reader should show `UPDATED BUILD CONFIRMED`. If you do not see those, GitHub Pages or your browser is still serving old files.
+This archive is focused on core Halo continuity and excludes alternate-continuity material.
