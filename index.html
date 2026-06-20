@@ -19,8 +19,21 @@
       <div class="boot-kicker">UNSC OFFICE OF NAVAL INTELLIGENCE</div>
       <h1>SECTION III ARCHIVAL TERMINAL</h1>
       <div class="boot-subline">RESTRICTED KNOWLEDGE NETWORK // ARCHIVE NODE 03</div>
-      <pre id="bootText" class="boot-text"></pre>
-      <button id="enterBtn" class="enter-btn">ENTER ARCHIVE</button>
+      <div class="boot-auth" id="bootAuth">
+        <div class="boot-auth-grid">
+          <div>
+            <label for="bootUser">USER DESIGNATION</label>
+            <input id="bootUser" type="text" autocomplete="off" spellcheck="false" placeholder="Enter user designation" />
+          </div>
+          <div>
+            <label for="bootPass">AUTHORIZATION KEY</label>
+            <input id="bootPass" type="password" autocomplete="off" placeholder="Enter authorization key" />
+          </div>
+        </div>
+        <button id="authBtn" class="enter-btn auth-btn">AUTHENTICATE</button>
+      </div>
+      <pre id="bootText" class="boot-text" hidden></pre>
+      <button id="enterBtn" class="enter-btn" hidden>ENTER ARCHIVE</button>
     </div>
   </section>
 

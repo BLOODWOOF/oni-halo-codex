@@ -9,7 +9,7 @@ const categoryDisplayMap = {
 };
 let currentId = null;
 let currentSearch = '';
-const unlockedDocs = new Set(JSON.parse(localStorage.getItem('oni-unlocked-docs') || '[]'));
+const unlockedDocs = new Set(JSON.parse(sessionStorage.getItem('oni-unlocked-docs') || '[]'));
 
 
 const $ = (id) => document.getElementById(id);
@@ -31,33 +31,74 @@ function formatWords(n) {
   return Intl.NumberFormat().format(n);
 }
 
+
 function bootSequence() {
   const boot = $('boot');
   const bootText = $('bootText');
   const enterBtn = $('enterBtn');
-  const lines = [
-    'INITIALIZING SECURE SHELL...',
-    'VERIFYING ARCHIVAL PACKAGE...',
-    `FILES INDEXED: ${data.count}`,
-    `TOTAL WORDS: ${formatWords(data.totalWords)}`,
-        'CANON BOUNDARY: CORE CONTINUITY ONLY',
-    'ANCILLARY TIMELINES: EXCLUDED',
-    'CLEARANCE TOKEN ACCEPTED',
-    'WELCOME, ARCHIVIST.'
-  ];
-  let idx = 0;
-  function typeNext() {
-    if (idx >= lines.length) {
-      enterBtn.classList.add('ready');
+  const authBtn = $('authBtn');
+  const bootUser = $('bootUser');
+  const bootPass = $('bootPass');
+  const bootAuth = $('bootAuth');
+
+  const runSequence = () => {
+    const user = bootUser.value.trim();
+    const pass = bootPass.value.trim();
+    if (!user) {
+      bootUser.focus();
       return;
     }
-    bootText.textContent += `> ${lines[idx]}\n`;
-    idx++;
-    setTimeout(typeNext, 95);
-  }
-  typeNext();
+    if (!pass) {
+      bootPass.focus();
+      return;
+    }
+
+    bootAuth.hidden = true;
+    bootText.hidden = false;
+    bootText.textContent = '';
+    enterBtn.hidden = true;
+    authBtn.disabled = true;
+
+    const lines = [
+      'RECEIVING USER CREDENTIALS...',
+      `USER DESIGNATION ACCEPTED: ${user.toUpperCase()}`,
+      'VERIFYING AUTHORIZATION KEY...',
+      'ESTABLISHING SECTION III HANDSHAKE...',
+      'INITIALIZING SECURE SHELL...',
+      'MOUNTING ARCHIVAL PACKAGE...',
+      `RECORDS INDEXED: ${data.count}`,
+      `TOTAL WORDS: ${formatWords(data.totalWords)}`,
+      'CANON BOUNDARY: CORE CONTINUITY ONLY',
+      'ANCILLARY TIMELINES: EXCLUDED',
+      'CLEARANCE TOKEN ACCEPTED',
+      'SESSION STATUS: AUTHENTICATED',
+      'WELCOME, ARCHIVIST.'
+    ];
+
+    let idx = 0;
+    function typeNext() {
+      if (idx >= lines.length) {
+        enterBtn.hidden = false;
+        enterBtn.classList.add('ready');
+        enterBtn.focus();
+        return;
+      }
+      bootText.textContent += `> ${lines[idx]}
+`;
+      idx++;
+      setTimeout(typeNext, idx < 4 ? 130 : 95);
+    }
+    typeNext();
+  };
+
+  authBtn.addEventListener('click', runSequence);
+  [bootUser, bootPass].forEach(el => el.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Enter') runSequence();
+  }));
   enterBtn.addEventListener('click', () => boot.classList.add('hidden'));
+  setTimeout(() => bootUser.focus(), 50);
 }
+
 
 function setClock() {
   const d = new Date();
@@ -237,7 +278,7 @@ function highlight(safeHtml, query) {
 
 
 function saveUnlockedDocs() {
-  localStorage.setItem('oni-unlocked-docs', JSON.stringify(Array.from(unlockedDocs)));
+  sessionStorage.setItem('oni-unlocked-docs', JSON.stringify(Array.from(unlockedDocs)));
 }
 
 function isClassifiedDoc(e) {
