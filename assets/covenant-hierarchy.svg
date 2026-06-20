@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081821"/>
+      <stop offset="100%" stop-color="#031017"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2430" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#091821" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#48e8ff" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="82%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#48e8ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg)"/>
+  <g opacity="0.08">
+    <path d="M0 70 H1400" stroke="#48e8ff"/>
+    <path d="M0 140 H1400" stroke="#48e8ff"/>
+    <path d="M0 210 H1400" stroke="#48e8ff"/>
+    <path d="M0 280 H1400" stroke="#48e8ff"/>
+    <path d="M0 350 H1400" stroke="#48e8ff"/>
+    <path d="M0 420 H1400" stroke="#48e8ff"/>
+    <path d="M0 490 H1400" stroke="#48e8ff"/>
+    <path d="M0 560 H1400" stroke="#48e8ff"/>
+    <path d="M0 630 H1400" stroke="#48e8ff"/>
+    <path d="M0 700 H1400" stroke="#48e8ff"/>
+    <path d="M100 0 V840" stroke="#48e8ff"/>
+    <path d="M250 0 V840" stroke="#48e8ff"/>
+    <path d="M400 0 V840" stroke="#48e8ff"/>
+    <path d="M550 0 V840" stroke="#48e8ff"/>
+    <path d="M700 0 V840" stroke="#48e8ff"/>
+    <path d="M850 0 V840" stroke="#48e8ff"/>
+    <path d="M1000 0 V840" stroke="#48e8ff"/>
+    <path d="M1150 0 V840" stroke="#48e8ff"/>
+    <path d="M1300 0 V840" stroke="#48e8ff"/>
+  </g>
+  <rect x="20" y="20" width="1360" height="800" rx="14" fill="url(#panel)" stroke="#48e8ff" stroke-opacity="0.45"/>
+  <rect x="42" y="40" width="1316" height="82" rx="10" fill="#0a1821" stroke="#48e8ff" stroke-opacity="0.28"/>
+  
+    <text x="68" y="92" fill="#d8fbff" font-family="Consolas, monospace" font-size="34" letter-spacing="1">COVENANT HIERARCHY</text>
+    <text x="68" y="124" fill="#81b8c1" font-family="Consolas, monospace" font-size="17">POLITICAL / MILITARY ORDERING OF THE HIERARCHIC AGE</text>
+    <path d="M52 146 H1348" stroke="url(#line)" stroke-width="3" filter="url(#glow)"/>
+    <rect x="80" y="190" width="1240" height="570" rx="12" fill="#09161d" stroke="#48e8ff" stroke-opacity="0.45"/><text x="96" y="218" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">COMMAND ECHELONS</text><path d="M94 228 H1306" stroke="#48e8ff" stroke-opacity="0.35"/><rect x="640.0" y="210.0" width="120" height="70" rx="12" fill="#0b1b24" stroke="#ffba57" stroke-opacity="0.55"/><text x="700" y="237" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">HIGH PROPHETS</text><text x="700" y="261" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">San’Shyuum triumvirate
+strategic / theological command</text><rect x="625.0" y="341.0" width="150" height="78" rx="12" fill="#0b1b24" stroke="#48e8ff" stroke-opacity="0.55"/><text x="700" y="372" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">MINISTRIES</text><text x="700" y="396" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">state apparatus
+logistics / doctrine / fleets</text><rect x="275.0" y="515.0" width="180" height="90" rx="12" fill="#0b1b24" stroke="#9dffcf" stroke-opacity="0.55"/><text x="365" y="552" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">SANGHEILI COMMAND</text><text x="365" y="576" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">naval command
+fleet leadership</text><rect x="945.0" y="515.0" width="180" height="90" rx="12" fill="#0b1b24" stroke="#ff4e63" stroke-opacity="0.55"/><text x="1035" y="552" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">JIRALHANAE COMMAND</text><text x="1035" y="576" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">late-war shock authority
+security / occupation</text><rect x="130.0" y="663.0" width="220" height="74" rx="12" fill="#0b1b24" stroke="#48e8ff" stroke-opacity="0.55"/><text x="240" y="692" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">KIG-YAR / UNGGOY</text><text x="240" y="716" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">skirmishers, crew, auxiliaries</text><rect x="450.0" y="663.0" width="220" height="74" rx="12" fill="#0b1b24" stroke="#48e8ff" stroke-opacity="0.55"/><text x="560" y="692" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">MGALEKGOLO</text><text x="560" y="716" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">heavy assault formations</text><rect x="770.0" y="663.0" width="220" height="74" rx="12" fill="#0b1b24" stroke="#48e8ff" stroke-opacity="0.55"/><text x="880" y="692" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">YANME’E / HURAGOK</text><text x="880" y="716" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">support, repair, engineering</text><rect x="1090.0" y="663.0" width="220" height="74" rx="12" fill="#0b1b24" stroke="#48e8ff" stroke-opacity="0.55"/><text x="1200" y="692" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">LEKGOLO / OTHERS</text><text x="1200" y="716" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">specialized species roles</text><path d="M700 280 V 342" stroke="#48e8ff" stroke-width="3"/><path d="M700 419 V 500" stroke="#48e8ff" stroke-width="3"/><path d="M700 500 H365" stroke="#48e8ff" stroke-width="2.4"/><path d="M700 500 H1035" stroke="#48e8ff" stroke-width="2.4"/><path d="M365 605 V 660" stroke="#9dffcf" stroke-width="2.2"/><path d="M365 660 H240" stroke="#48e8ff" stroke-width="2"/><path d="M365 660 H560" stroke="#48e8ff" stroke-width="2"/><path d="M1035 605 V 660" stroke="#ff4e63" stroke-width="2.2"/><path d="M1035 660 H880" stroke="#48e8ff" stroke-width="2"/><path d="M1035 660 H1200" stroke="#48e8ff" stroke-width="2"/>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081821"/>
+      <stop offset="100%" stop-color="#031017"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2430" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#091821" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#48e8ff" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="82%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#48e8ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg)"/>
+  <g opacity="0.08">
+    <path d="M0 70 H1400" stroke="#48e8ff"/>
+    <path d="M0 140 H1400" stroke="#48e8ff"/>
+    <path d="M0 210 H1400" stroke="#48e8ff"/>
+    <path d="M0 280 H1400" stroke="#48e8ff"/>
+    <path d="M0 350 H1400" stroke="#48e8ff"/>
+    <path d="M0 420 H1400" stroke="#48e8ff"/>
+    <path d="M0 490 H1400" stroke="#48e8ff"/>
+    <path d="M0 560 H1400" stroke="#48e8ff"/>
+    <path d="M0 630 H1400" stroke="#48e8ff"/>
+    <path d="M0 700 H1400" stroke="#48e8ff"/>
+    <path d="M100 0 V840" stroke="#48e8ff"/>
+    <path d="M250 0 V840" stroke="#48e8ff"/>
+    <path d="M400 0 V840" stroke="#48e8ff"/>
+    <path d="M550 0 V840" stroke="#48e8ff"/>
+    <path d="M700 0 V840" stroke="#48e8ff"/>
+    <path d="M850 0 V840" stroke="#48e8ff"/>
+    <path d="M1000 0 V840" stroke="#48e8ff"/>
+    <path d="M1150 0 V840" stroke="#48e8ff"/>
+    <path d="M1300 0 V840" stroke="#48e8ff"/>
+  </g>
+  <rect x="20" y="20" width="1360" height="800" rx="14" fill="url(#panel)" stroke="#48e8ff" stroke-opacity="0.45"/>
+  <rect x="42" y="40" width="1316" height="82" rx="10" fill="#0a1821" stroke="#48e8ff" stroke-opacity="0.28"/>
+  
+    <text x="68" y="92" fill="#d8fbff" font-family="Consolas, monospace" font-size="34" letter-spacing="1">FORERUNNER SOCIETY</text>
+    <text x="68" y="124" fill="#81b8c1" font-family="Consolas, monospace" font-size="17">REPRESENTATIVE RATE STRUCTURE AND CIVILIZATIONAL FUNCTIONS</text>
+    <path d="M52 146 H1348" stroke="url(#line)" stroke-width="3" filter="url(#glow)"/>
+    <rect x="80" y="190" width="1240" height="560" rx="12" fill="#09161d" stroke="#48e8ff" stroke-opacity="0.45"/><text x="96" y="218" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">ECUMENE RATE FUNCTIONS</text><path d="M94 228 H1306" stroke="#48e8ff" stroke-opacity="0.35"/><circle cx="260" cy="300" r="92" fill="#0a1a22" stroke="#48e8ff" stroke-width="2.4"/><circle cx="260" cy="300" r="62" fill="none" stroke="#48e8ff" stroke-opacity="0.24"/><text x="260" y="295" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Builder</text><text x="260" y="320" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">infrastructure / megastructures</text><circle cx="700" cy="300" r="92" fill="#0a1a22" stroke="#ff4e63" stroke-width="2.4"/><circle cx="700" cy="300" r="62" fill="none" stroke="#ff4e63" stroke-opacity="0.24"/><text x="700" y="295" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Warrior-Servant</text><text x="700" y="320" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">military / security</text><circle cx="1140" cy="300" r="92" fill="#0a1a22" stroke="#9dffcf" stroke-width="2.4"/><circle cx="1140" cy="300" r="62" fill="none" stroke="#9dffcf" stroke-opacity="0.24"/><text x="1140" y="295" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Lifeworker</text><text x="1140" y="320" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">biology / preservation</text><circle cx="260" cy="560" r="92" fill="#0a1a22" stroke="#ffba57" stroke-width="2.4"/><circle cx="260" cy="560" r="62" fill="none" stroke="#ffba57" stroke-opacity="0.24"/><text x="260" y="555" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Miner</text><text x="260" y="580" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">resource extraction / logistics</text><circle cx="700" cy="560" r="92" fill="#0a1a22" stroke="#48e8ff" stroke-width="2.4"/><circle cx="700" cy="560" r="62" fill="none" stroke="#48e8ff" stroke-opacity="0.24"/><text x="700" y="555" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Judicial</text><text x="700" y="580" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">law / governance</text><circle cx="1140" cy="560" r="92" fill="#0a1a22" stroke="#48e8ff" stroke-width="2.4"/><circle cx="1140" cy="560" r="62" fill="none" stroke="#48e8ff" stroke-opacity="0.24"/><text x="1140" y="555" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Manipular</text><text x="1140" y="580" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">youth / training cohort</text><path d="M352 300 H608" stroke="#48e8ff" stroke-opacity="0.4" stroke-dasharray="8 6"/><path d="M792 300 H1048" stroke="#48e8ff" stroke-opacity="0.4" stroke-dasharray="8 6"/><path d="M260 392 V468" stroke="#48e8ff" stroke-opacity="0.4" stroke-dasharray="8 6"/><path d="M700 392 V468" stroke="#48e8ff" stroke-opacity="0.4" stroke-dasharray="8 6"/><path d="M1140 392 V468" stroke="#48e8ff" stroke-opacity="0.4" stroke-dasharray="8 6"/><rect x="160" y="660" width="1080" height="60" rx="12" fill="#09161d" stroke="#ffba57" stroke-opacity="0.45"/><text x="190" y="699" text-anchor="start" fill="#81b8c1" font-family="Consolas, monospace" font-size="15">This is a simplified cultural map used to orient readers in Forerunner and pre-Array archival material.</text>
+</svg>

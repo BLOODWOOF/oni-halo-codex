@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081821"/>
+      <stop offset="100%" stop-color="#031017"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2430" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#091821" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#48e8ff" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="82%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#48e8ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg)"/>
+  <g opacity="0.08">
+    <path d="M0 70 H1400" stroke="#48e8ff"/>
+    <path d="M0 140 H1400" stroke="#48e8ff"/>
+    <path d="M0 210 H1400" stroke="#48e8ff"/>
+    <path d="M0 280 H1400" stroke="#48e8ff"/>
+    <path d="M0 350 H1400" stroke="#48e8ff"/>
+    <path d="M0 420 H1400" stroke="#48e8ff"/>
+    <path d="M0 490 H1400" stroke="#48e8ff"/>
+    <path d="M0 560 H1400" stroke="#48e8ff"/>
+    <path d="M0 630 H1400" stroke="#48e8ff"/>
+    <path d="M0 700 H1400" stroke="#48e8ff"/>
+    <path d="M100 0 V840" stroke="#48e8ff"/>
+    <path d="M250 0 V840" stroke="#48e8ff"/>
+    <path d="M400 0 V840" stroke="#48e8ff"/>
+    <path d="M550 0 V840" stroke="#48e8ff"/>
+    <path d="M700 0 V840" stroke="#48e8ff"/>
+    <path d="M850 0 V840" stroke="#48e8ff"/>
+    <path d="M1000 0 V840" stroke="#48e8ff"/>
+    <path d="M1150 0 V840" stroke="#48e8ff"/>
+    <path d="M1300 0 V840" stroke="#48e8ff"/>
+  </g>
+  <rect x="20" y="20" width="1360" height="800" rx="14" fill="url(#panel)" stroke="#48e8ff" stroke-opacity="0.45"/>
+  <rect x="42" y="40" width="1316" height="82" rx="10" fill="#0a1821" stroke="#48e8ff" stroke-opacity="0.28"/>
+  
+    <text x="68" y="92" fill="#d8fbff" font-family="Consolas, monospace" font-size="34" letter-spacing="1">HALO RING CUTAWAY</text>
+    <text x="68" y="124" fill="#81b8c1" font-family="Consolas, monospace" font-size="17">MACRO-STRUCTURE OVERVIEW OF A STANDARD HALO INSTALLATION</text>
+    <path d="M52 146 H1348" stroke="url(#line)" stroke-width="3" filter="url(#glow)"/>
+    <rect x="80" y="190" width="1240" height="560" rx="12" fill="#09161d" stroke="#48e8ff" stroke-opacity="0.45"/><text x="96" y="218" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">INSTALLATION SECTIONAL MODEL</text><path d="M94 228 H1306" stroke="#48e8ff" stroke-opacity="0.35"/><ellipse cx="700" cy="470" rx="350" ry="110" fill="none" stroke="#48e8ff" stroke-width="5"/><ellipse cx="700" cy="470" rx="280" ry="80" fill="none" stroke="#9dffcf" stroke-opacity="0.45" stroke-width="2.2"/><path d="M420 470 A280 80 0 0 1 980 470" stroke="#ffba57" stroke-width="4"/><path d="M700 360 V 580" stroke="#48e8ff" stroke-opacity="0.35" stroke-dasharray="8 8"/><path d="M260 260 L 430 420" stroke="#48e8ff" stroke-width="1.8"/><rect x="168" y="244" width="184" height="34" rx="8" fill="#081720" stroke="#48e8ff" stroke-opacity="0.35"/><text x="260" y="265" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="14">Inner habitation surface</text><path d="M1110 260 L 970 430" stroke="#48e8ff" stroke-width="1.8"/><rect x="1018" y="244" width="184" height="34" rx="8" fill="#081720" stroke="#48e8ff" stroke-opacity="0.35"/><text x="1110" y="265" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="14">Weather / biosphere shell</text><path d="M250 620 L 445 520" stroke="#48e8ff" stroke-width="1.8"/><rect x="158" y="604" width="184" height="34" rx="8" fill="#081720" stroke="#48e8ff" stroke-opacity="0.35"/><text x="250" y="625" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="14">Superstructure and transit</text><path d="M1100 620 L 950 520" stroke="#48e8ff" stroke-width="1.8"/><rect x="1008" y="604" width="184" height="34" rx="8" fill="#081720" stroke="#48e8ff" stroke-opacity="0.35"/><text x="1100" y="625" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="14">Exterior armor / systems</text><rect x="180" y="640" width="1040" height="70" rx="12" fill="#09161d" stroke="#ffba57" stroke-opacity="0.45"/><text x="210" y="684" text-anchor="start" fill="#81b8c1" font-family="Consolas, monospace" font-size="16">Halo installations appear across Forerunner, Flood, Reclaimer, and Banished-era records; this view anchors the reader spatially.</text>
+</svg>

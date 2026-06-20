@@ -328,47 +328,126 @@ function renderLockOverlay(e) {
   setTimeout(() => input.focus(), 0);
 }
 
+
+
 function getVisualBundle(e) {
   const v = e.volume ?? -1;
   const title = `${e.title} ${e.file}`.toLowerCase();
+
   const byTitle = [
-    { match: ['flood'], banner: 'assets/flood-banner.svg', caption: 'Flood threat file — parasite biology, Graveminds, logic plague, and containment doctrine.', diagrams: [
-      ['assets/installation-network.svg', 'Containment network', 'Halo Array, the Ark, and related installations in the anti-Flood system.'],
-      ['assets/timeline-overview.svg', 'Era placement', 'Where Flood-related crises sit within the broader chronology.']
-    ]},
-    { match: ['forerunner','precursor','halo array','shield world','installation','zeta halo','the ark'], banner: 'assets/forerunner-banner.svg', caption: 'Forerunner and deep-history archive — precursor context, ecumene civilization, and galaxy-scale infrastructure.', diagrams: [
-      ['assets/installation-network.svg', 'Installation network', 'Halo rings, the Ark, and other major megastructures.'],
-      ['assets/faction-network.svg', 'Power relationships', 'How ancient and modern powers connect across the setting.']
-    ]},
-    { match: ['covenant','schism','harvest','reach','halo 2','halo 3','odst','contact'], banner: 'assets/covenant-banner.svg', caption: 'Covenant-era archive — faction hierarchy, species coalitions, and warfront operations.', diagrams: [
-      ['assets/timeline-overview.svg', 'War chronology', 'Major eras from prehistory through the Human-Covenant War.'],
-      ['assets/faction-network.svg', 'Faction network', 'UNSC, ONI, Covenant, Banished, Forerunners, and Flood at a glance.']
-    ]},
-    { match: ['spartan','orion','mjolnir','odst'], banner: 'assets/unsc-banner.svg', caption: 'Human military archive — ONI, UNSC command structure, and special operations programs.', diagrams: [
-      ['assets/spartan-programs.svg', 'Program lineage', 'ORION through SPARTAN-IV in one compact reference chart.'],
-      ['assets/faction-network.svg', 'Power network', 'Where ONI and the UNSC sit among other major powers.']
-    ]},
-    { match: ['banished','atriox'], banner: 'assets/banished-banner.svg', caption: 'Banished archive — post-Covenant mercenary empire, Ark campaign, and Zeta Halo operations.', diagrams: [
-      ['assets/faction-network.svg', 'Faction network', 'Banished position relative to the UNSC, Covenant legacy, and the Flood.'],
-      ['assets/timeline-overview.svg', 'Era placement', 'Banished conflicts within the larger Halo chronology.']
-    ]},
-    { match: ['created','cortana','guardian','domain','infinite'], banner: 'assets/created-banner.svg', caption: 'Created-era archive — AI hegemony, Guardians, and the lead-in to Halo Infinite.', diagrams: [
-      ['assets/timeline-overview.svg', 'Era placement', 'Created occupation and Banished conflict in the late chronology.'],
-      ['assets/faction-network.svg', 'Power network', 'The shifting balance between AI, human, and post-Covenant factions.']
-    ]},
-    { match: ['source','index','canon','reference','glossary','checklist','cross reference','micro lore'], banner: 'assets/unsc-banner.svg', caption: 'Reference sector — orientation materials, indexes, and source-routing aids for the archive.', diagrams: [
-      ['assets/source-ecosystem.svg', 'Source ecosystem', 'How games, novels, comics, logs, and reference works feed the archive.'],
-      ['assets/timeline-overview.svg', 'Master chronology', 'Quick orientation to the archive’s timeline structure.']
-    ]}
+    {
+      matches: ['flood'],
+      banner: 'assets/flood-banner.svg',
+      caption: 'Flood threat file — parasite biology, Graveminds, logic plague, and containment doctrine.',
+      cards: [
+        ['assets/flood-forms.svg', 'Flood forms', 'Core Flood combat and infection forms that commonly appear in parasite records.'],
+        ['assets/flood-cycle.svg', 'Infestation cycle', 'A simplified progression from first contact to organized Flood intelligence.'],
+        ['assets/installation-network.svg', 'Containment network', 'Halo Array, the Ark, and related installations in the anti-Flood system.'],
+        ['assets/timeline-overview.svg', 'Era placement', 'Where Flood-related crises sit within the broader chronology.']
+      ]
+    },
+    {
+      matches: ['forerunner','precursor','halo array','shield world','installation','zeta halo','the ark'],
+      banner: 'assets/forerunner-banner.svg',
+      caption: 'Forerunner and deep-history archive — precursor context, ecumene civilization, and galaxy-scale infrastructure.',
+      cards: [
+        ['assets/halo-ring-cutaway.svg', 'Halo ring cutaway', 'A spatial overview of a standard Halo installation.'],
+        ['assets/forerunner-society.svg', 'Forerunner society', 'Simplified orientation chart for major Forerunner rates and functions.'],
+        ['assets/installation-network.svg', 'Installation network', 'Halo rings, the Ark, and other major megastructures.'],
+        ['assets/timeline-overview.svg', 'Deep-history chronology', 'Ancient eras from Precursors through the Array firing.']
+      ]
+    },
+    {
+      matches: ['covenant','schism','harvest','reach','halo 2','halo 3','odst','contact'],
+      banner: 'assets/covenant-banner.svg',
+      caption: 'Covenant-era archive — faction hierarchy, species coalitions, and warfront operations.',
+      cards: [
+        ['assets/covenant-hierarchy.svg', 'Covenant hierarchy', 'Political and military ordering during the Hierarchic Covenant.'],
+        ['assets/covenant-fleet.svg', 'Covenant war assets', 'Representative warship layout and fleet-role reference.'],
+        ['assets/timeline-overview.svg', 'War chronology', 'Major eras from prehistory through the Human-Covenant War.'],
+        ['assets/faction-network.svg', 'Faction network', 'UNSC, ONI, Covenant, Banished, Forerunners, and Flood at a glance.']
+      ]
+    },
+    {
+      matches: ['spartan','orion','mjolnir','odst','unsc','oni','infinity'],
+      banner: 'assets/unsc-banner.svg',
+      caption: 'Human military archive — ONI, UNSC command structure, and special operations programs.',
+      cards: [
+        ['assets/spartan-programs.svg', 'Spartan program lineage', 'ORION through SPARTAN-IV in one compact progression chart.'],
+        ['assets/mjolnir-schematic.svg', 'MJOLNIR system overview', 'Subsystem-oriented schematic used for Spartan and armor records.'],
+        ['assets/unsc-fleet.svg', 'UNSC fleet profile', 'Representative vessel categories referenced in war and post-war files.'],
+        ['assets/faction-network.svg', 'Power network', 'Where ONI and the UNSC sit among other major powers.']
+      ]
+    },
+    {
+      matches: ['banished','atriox'],
+      banner: 'assets/banished-banner.svg',
+      caption: 'Banished archive — post-Covenant mercenary empire, Ark campaign, and Zeta Halo operations.',
+      cards: [
+        ['assets/banished-command.svg', 'Banished organization', 'A command-lattice overview centered on Atriox and field structure.'],
+        ['assets/banished-arsenal.svg', 'Banished war assets', 'Representative Banished vessels, troops, and siege systems.'],
+        ['assets/faction-network.svg', 'Faction network', 'Banished position relative to the UNSC, Covenant legacy, and the Flood.'],
+        ['assets/timeline-overview.svg', 'Era placement', 'Banished conflicts within the larger Halo chronology.']
+      ]
+    },
+    {
+      matches: ['created','cortana','guardian','domain','infinite'],
+      banner: 'assets/created-banner.svg',
+      caption: 'Created-era archive — AI hegemony, Guardians, and the lead-in to Halo Infinite.',
+      cards: [
+        ['assets/guardian-network.svg', 'Guardian network', 'Simplified Created control topology centered on Guardian deployment.'],
+        ['assets/faction-network.svg', 'Power network', 'The shifting balance between AI, human, and post-Covenant factions.'],
+        ['assets/timeline-overview.svg', 'Late chronology', 'Created occupation and Banished conflict in the late chronology.'],
+        ['assets/halo-ring-cutaway.svg', 'Zeta Halo context', 'Useful visual context for late-era records tied to Installation 07.']
+      ]
+    },
+    {
+      matches: ['source','index','canon','reference','glossary','checklist','cross reference','micro lore'],
+      banner: 'assets/unsc-banner.svg',
+      caption: 'Reference sector — orientation materials, indexes, and source-routing aids for the archive.',
+      cards: [
+        ['assets/source-ecosystem.svg', 'Source ecosystem', 'How games, novels, comics, logs, and reference works feed the archive.'],
+        ['assets/timeline-overview.svg', 'Master chronology', 'Quick orientation to the archive’s timeline structure.'],
+        ['assets/faction-network.svg', 'Faction network', 'A cross-setting relationship map for major powers.'],
+        ['assets/installation-network.svg', 'Installation network', 'Reference map for rings and related megastructures.']
+      ]
+    }
   ];
-  for (const rule of byTitle) {
-    if (rule.match.some(m => title.includes(m))) return rule;
+
+  for (const bundle of byTitle) {
+    if (bundle.matches.some(m => title.includes(m))) return bundle;
   }
-  if (v >= 3 && v <= 10) return { banner: 'assets/forerunner-banner.svg', caption: 'Early chronology archive — Precursors, Forerunners, ancient humanity, and the Halo Array.', diagrams: [['assets/timeline-overview.svg', 'Master chronology', 'Major eras across the Halo setting.'], ['assets/installation-network.svg', 'Installation network', 'Key Forerunner megastructures and array context.']] };
-  if (v >= 11 && v <= 24) return { banner: 'assets/covenant-banner.svg', caption: 'War-era archive — Covenant rise, first contact, and the Human-Covenant War.', diagrams: [['assets/timeline-overview.svg', 'War chronology', 'Major campaign eras and narrative waypoints.'], ['assets/spartan-programs.svg', 'Spartan programs', 'Program progression during humanity’s war years.']] };
-  if (v >= 25 && v <= 37) return { banner: 'assets/created-banner.svg', caption: 'Post-war archive — shield worlds, ONI operations, Reclaimer conflicts, Created occupation, and Infinite-era events.', diagrams: [['assets/faction-network.svg', 'Faction network', 'Key powers and the conflict landscape.'], ['assets/timeline-overview.svg', 'Late-era chronology', 'Post-war to Infinite positioning.']] };
-  if (v >= 38 && v <= 53) return { banner: 'assets/unsc-banner.svg', caption: 'Encyclopedia sector — characters, factions, species, weapons, armor, worlds, and installations.', diagrams: [['assets/faction-network.svg', 'Faction network', 'Big-picture context for key powers.'], ['assets/installation-network.svg', 'Installation network', 'Reference map for rings and megastructures.']] };
-  return { banner: 'assets/unsc-banner.svg', caption: 'Archive node — browse the records by chronology, registry, and source track.', diagrams: [['assets/timeline-overview.svg', 'Master chronology', 'The major eras covered by this archive.'], ['assets/source-ecosystem.svg', 'Source ecosystem', 'The types of material synthesized into the archive.']] };
+
+  if (v >= 3 && v <= 10) return { banner: 'assets/forerunner-banner.svg', caption: 'Early chronology archive — Precursors, Forerunners, ancient humanity, and the Halo Array.', cards: [
+    ['assets/timeline-overview.svg', 'Master chronology', 'Major eras across the Halo setting.'],
+    ['assets/halo-ring-cutaway.svg', 'Halo ring cutaway', 'Spatial orientation for Halo Array references.'],
+    ['assets/forerunner-society.svg', 'Forerunner society', 'Simplified structure for pre-Array records.'],
+    ['assets/installation-network.svg', 'Installation network', 'Key Forerunner megastructures and array context.']
+  ] };
+  if (v >= 11 && v <= 24) return { banner: 'assets/covenant-banner.svg', caption: 'War-era archive — Covenant rise, first contact, and the Human-Covenant War.', cards: [
+    ['assets/timeline-overview.svg', 'War chronology', 'Major campaign eras and narrative waypoints.'],
+    ['assets/covenant-hierarchy.svg', 'Covenant hierarchy', 'Command and species ordering for war-era records.'],
+    ['assets/covenant-fleet.svg', 'Covenant war assets', 'Common naval context for battles and fleets.'],
+    ['assets/spartan-programs.svg', 'Spartan programs', 'Program progression during humanity’s war years.']
+  ] };
+  if (v >= 25 && v <= 37) return { banner: 'assets/created-banner.svg', caption: 'Post-war archive — shield worlds, ONI operations, Reclaimer conflicts, Created occupation, and Infinite-era events.', cards: [
+    ['assets/faction-network.svg', 'Faction network', 'Key powers and the conflict landscape.'],
+    ['assets/guardian-network.svg', 'Guardian network', 'Created command and enforcement context.'],
+    ['assets/timeline-overview.svg', 'Late chronology', 'Post-war to Infinite positioning.'],
+    ['assets/halo-ring-cutaway.svg', 'Installation context', 'Useful orientation for Zeta Halo and related records.']
+  ] };
+  if (v >= 38 && v <= 53) return { banner: 'assets/unsc-banner.svg', caption: 'Registry sector — characters, factions, species, weapons, armor, worlds, and installations.', cards: [
+    ['assets/faction-network.svg', 'Faction network', 'Big-picture context for key powers.'],
+    ['assets/source-ecosystem.svg', 'Source ecosystem', 'How the archive draws from across the canon.'],
+    ['assets/installation-network.svg', 'Installation network', 'Reference map for rings and megastructures.'],
+    ['assets/mjolnir-schematic.svg', 'MJOLNIR overview', 'Useful technical context for armor and Spartan entries.']
+  ] };
+  return { banner: 'assets/unsc-banner.svg', caption: 'Archive node — browse the records by chronology, registry, and source track.', cards: [
+    ['assets/timeline-overview.svg', 'Master chronology', 'The major eras covered by this archive.'],
+    ['assets/source-ecosystem.svg', 'Source ecosystem', 'The types of material synthesized into the archive.'],
+    ['assets/faction-network.svg', 'Faction network', 'High-level power relationships across the setting.'],
+    ['assets/installation-network.svg', 'Installation network', 'Reference orientation for rings and related installations.']
+  ] };
 }
 
 function renderVisualPanel(e) {
@@ -377,18 +456,22 @@ function renderVisualPanel(e) {
     $('visualPanel').innerHTML = '';
     return;
   }
-  const diagrams = (bundle.diagrams || []).slice(0, 2).map(([src, title, desc]) => `
+  const cards = (bundle.cards || []).slice(0, 4).map(([src, title, desc]) => `
     <figure class="visual-card">
-      <img src="${src}" alt="${escapeHtml(title)}" />
+      <div class="visual-media-frame">
+        <img src="${src}" alt="${escapeHtml(title)}" loading="lazy" />
+      </div>
       <figcaption class="visual-caption"><strong>${escapeHtml(title)}</strong>${escapeHtml(desc)}</figcaption>
     </figure>
   `).join('');
   $('visualPanel').innerHTML = `
     <figure class="visual-banner">
-      <img src="${bundle.banner}" alt="Archive sector banner" />
+      <div class="visual-media-frame visual-banner-frame">
+        <img src="${bundle.banner}" alt="Archive sector banner" />
+      </div>
       <figcaption class="visual-caption">${escapeHtml(bundle.caption)}</figcaption>
     </figure>
-    <div class="visual-grid">${diagrams}</div>
+    <div class="visual-grid">${cards}</div>
   `;
 }
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="840" viewBox="0 0 1400 840" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081821"/>
+      <stop offset="100%" stop-color="#031017"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2430" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#091821" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#48e8ff" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="82%" stop-color="#48e8ff" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#48e8ff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4.5" result="g"/>
+      <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="840" fill="url(#bg)"/>
+  <g opacity="0.08">
+    <path d="M0 70 H1400" stroke="#48e8ff"/>
+    <path d="M0 140 H1400" stroke="#48e8ff"/>
+    <path d="M0 210 H1400" stroke="#48e8ff"/>
+    <path d="M0 280 H1400" stroke="#48e8ff"/>
+    <path d="M0 350 H1400" stroke="#48e8ff"/>
+    <path d="M0 420 H1400" stroke="#48e8ff"/>
+    <path d="M0 490 H1400" stroke="#48e8ff"/>
+    <path d="M0 560 H1400" stroke="#48e8ff"/>
+    <path d="M0 630 H1400" stroke="#48e8ff"/>
+    <path d="M0 700 H1400" stroke="#48e8ff"/>
+    <path d="M100 0 V840" stroke="#48e8ff"/>
+    <path d="M250 0 V840" stroke="#48e8ff"/>
+    <path d="M400 0 V840" stroke="#48e8ff"/>
+    <path d="M550 0 V840" stroke="#48e8ff"/>
+    <path d="M700 0 V840" stroke="#48e8ff"/>
+    <path d="M850 0 V840" stroke="#48e8ff"/>
+    <path d="M1000 0 V840" stroke="#48e8ff"/>
+    <path d="M1150 0 V840" stroke="#48e8ff"/>
+    <path d="M1300 0 V840" stroke="#48e8ff"/>
+  </g>
+  <rect x="20" y="20" width="1360" height="800" rx="14" fill="url(#panel)" stroke="#48e8ff" stroke-opacity="0.45"/>
+  <rect x="42" y="40" width="1316" height="82" rx="10" fill="#0a1821" stroke="#48e8ff" stroke-opacity="0.28"/>
+  
+    <text x="68" y="92" fill="#d8fbff" font-family="Consolas, monospace" font-size="34" letter-spacing="1">UNSC FLEET PROFILE</text>
+    <text x="68" y="124" fill="#81b8c1" font-family="Consolas, monospace" font-size="17">REPRESENTATIVE NAVAL ORDER OF BATTLE AND STRATEGIC ASSETS</text>
+    <path d="M52 146 H1348" stroke="url(#line)" stroke-width="3" filter="url(#glow)"/>
+    <rect x="70" y="180" width="1260" height="590" rx="12" fill="#09161d" stroke="#48e8ff" stroke-opacity="0.45"/><text x="86" y="208" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">VESSEL CATEGORIES</text><path d="M84 218 H1316" stroke="#48e8ff" stroke-opacity="0.35"/><path d="M135.0 330 H265.0 L305.0 365 L235.0 400 H165.0 L135.0 366 Z" fill="#0d2631" stroke="#48e8ff" stroke-width="2.2"/><text x="220" y="440" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">Frigate</text><path d="M390.0 330 H590.0 L630.0 365 L560.0 400 H420.0 L390.0 366 Z" fill="#0d2631" stroke="#48e8ff" stroke-width="2.2"/><text x="510" y="440" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">Destroyer</text><path d="M700.0 330 H960.0 L1000.0 365 L930.0 400 H730.0 L700.0 366 Z" fill="#0d2631" stroke="#48e8ff" stroke-width="2.2"/><text x="850" y="440" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">Cruiser</text><path d="M930.0 330 H1250.0 L1290.0 365 L1220.0 400 H960.0 L930.0 366 Z" fill="#0d2631" stroke="#48e8ff" stroke-width="2.2"/><text x="1110" y="440" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="18">Carrier / Infinity-class</text><text x="220" y="540" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">escort / screening</text><text x="510" y="540" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">line warship</text><text x="850" y="540" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">fleet backbone</text><text x="1110" y="540" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">supercarrier / flagship</text><rect x="120" y="620" width="1160" height="95" rx="12" fill="#09161d" stroke="#ffba57" stroke-opacity="0.45"/><text x="145" y="658" text-anchor="start" fill="#81b8c1" font-family="Consolas, monospace" font-size="16">This profile provides context for UNSC, naval warfare, and campaign records across the Human-Covenant War and post-war periods.</text><text x="145" y="688" text-anchor="start" fill="#81b8c1" font-family="Consolas, monospace" font-size="16">Representative silhouettes are used here as orientation rather than exact class-by-class technical diagrams.</text>
+</svg>
