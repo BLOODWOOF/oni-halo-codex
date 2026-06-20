@@ -19,8 +19,21 @@
       <div class="boot-kicker">UNSC OFFICE OF NAVAL INTELLIGENCE</div>
       <h1>SECTION III ARCHIVAL TERMINAL</h1>
       <div class="boot-subline">RESTRICTED KNOWLEDGE NETWORK // ARCHIVE NODE 03</div>
-      <pre id="bootText" class="boot-text"></pre>
-      <button id="enterBtn" class="enter-btn">ENTER ARCHIVE</button>
+      <div class="boot-auth" id="bootAuth">
+        <div class="boot-auth-grid">
+          <div>
+            <label for="bootUser">USER DESIGNATION</label>
+            <input id="bootUser" type="text" autocomplete="off" spellcheck="false" placeholder="Enter user designation" />
+          </div>
+          <div>
+            <label for="bootPass">AUTHORIZATION KEY</label>
+            <input id="bootPass" type="password" autocomplete="off" placeholder="Enter authorization key" />
+          </div>
+        </div>
+        <button id="authBtn" class="enter-btn auth-btn">AUTHENTICATE</button>
+      </div>
+      <pre id="bootText" class="boot-text" hidden></pre>
+      <button id="enterBtn" class="enter-btn" hidden>ENTER ARCHIVE</button>
     </div>
   </section>
 
@@ -46,32 +59,30 @@
 
     <main class="terminal-grid">
       <aside class="sidebar">
-
         <div class="search-wrap">
           <label for="searchInput">ARCHIVE QUERY</label>
           <input id="searchInput" type="search" autocomplete="off" placeholder="Search records, factions, eras, vessels..." />
-          
         </div>
 
         <div class="stats" id="stats"></div>
-
         <nav class="category-list" id="categoryList" aria-label="Archive categories"></nav>
 
-        <div class="sidebar-title">FILES</div>
-        <nav class="file-list" id="fileList" aria-label="Archive files"></nav>
+        <div class="sidebar-title">RECORDS</div>
+        <nav class="file-list" id="fileList" aria-label="Archive records"></nav>
       </aside>
 
       <section class="reader">
         <div class="reader-toolbar">
           <div class="crumbs" id="crumbs">ARCHIVE / INITIALIZING</div>
           <div class="toolbar-actions">
-            <button id="timelineBtn" title="Open master timeline">Timeline</button>
-            <button id="randomBtn" title="Open a random file">Random Record</button>
-            <button id="copyRefBtn" title="Copy current file reference">Transmit Ref</button>
+            <button id="timelineBtn" title="Open master chronology">Timeline</button>
+            <button id="randomBtn" title="Open a random record">Random Record</button>
+            <button id="copyRefBtn" title="Transmit current record reference">Transmit Ref</button>
           </div>
         </div>
 
-        <article class="document-panel" id="documentPanel">          <div class="lock-overlay" id="lockOverlay" hidden></div>
+        <article class="document-panel" id="documentPanel">
+          <div class="lock-overlay" id="lockOverlay" hidden></div>
           <section class="visual-panel" id="visualPanel" aria-label="Archive visuals"></section>
           <div class="doc-meta" id="docMeta"></div>
           <h2 id="docTitle">Loading archive...</h2>
