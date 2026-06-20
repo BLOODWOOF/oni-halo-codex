@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" fill="none">
+<defs>
+  <linearGradient id="bggrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07131a"/>
+    <stop offset="100%" stop-color="#03080c"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="500" fill="url(#bggrad)"/>
+<rect x="18" y="18" width="1164" height="464" stroke="#48e8ff" stroke-opacity="0.4"/>
+<text x="70" y="70" fill="#48e8ff" font-family="Consolas, monospace" font-size="28">GALACTIC POWER NETWORK</text><circle cx="220" cy="180" r="72" stroke="#48e8ff" fill="#0a1a23"/><text x="220" y="176" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">UNSC</text><text x="220" y="200" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">human military</text><circle cx="420" cy="110" r="64" stroke="#ffba57" fill="#0a1a23"/><text x="420" y="106" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">ONI</text><text x="420" y="130" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">intelligence</text><circle cx="660" cy="180" r="86" stroke="#48e8ff" fill="#0a1a23"/><text x="660" y="176" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Covenant</text><text x="660" y="200" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">imperial hegemony</text><circle cx="1000" cy="180" r="78" stroke="#ff4e63" fill="#0a1a23"/><text x="1000" y="176" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Banished</text><text x="1000" y="200" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">mercenary power</text><circle cx="500" cy="370" r="80" stroke="#9dffcf" fill="#0a1a23"/><text x="500" y="366" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Forerunners</text><text x="500" y="390" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">ancient ecumene</text><circle cx="830" cy="370" r="74" stroke="#ff4e63" fill="#0a1a23"/><text x="830" y="366" text-anchor="middle" fill="#d8fbff" font-family="Consolas, monospace" font-size="20">Flood</text><text x="830" y="390" text-anchor="middle" fill="#81b8c1" font-family="Consolas, monospace" font-size="12">galactic parasite</text><path d="M285 160 C320 145,360 130,392 118" stroke="#48e8ff" stroke-width="2"/>
+<path d="M290 190 C380 210,520 220,574 208" stroke="#48e8ff" stroke-width="2"/>
+<path d="M742 186 C810 188,900 188,922 188" stroke="#48e8ff" stroke-width="2"/>
+<path d="M628 248 C590 280,556 310,535 332" stroke="#48e8ff" stroke-width="2"/>
+<path d="M728 246 C764 276,787 302,807 330" stroke="#ff4e63" stroke-width="2"/>
+<path d="M564 372 H756" stroke="#81b8c1" stroke-width="1.6" stroke-dasharray="6 6"/>
+<text x="518" y="315" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">legacy</text>
+<text x="808" y="314" fill="#81b8c1" font-family="Consolas, monospace" font-size="13">containment</text>
+</svg>

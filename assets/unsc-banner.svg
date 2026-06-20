@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" fill="none">
+<defs>
+  <linearGradient id="bggrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07131a"/>
+    <stop offset="100%" stop-color="#03080c"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="500" fill="url(#bggrad)"/>
+<rect x="18" y="18" width="1164" height="464" stroke="#48e8ff" stroke-opacity="0.4"/>
+
+<g opacity="0.16">
+  <rect x="115" y="145" width="250" height="190" rx="8" stroke="#48e8ff" stroke-width="2"/>
+  <path d="M150 280 H330" stroke="#48e8ff" stroke-width="2"/>
+  <path d="M170 170 H310 M170 205 H310 M170 240 H310" stroke="#81b8c1" stroke-width="1.4"/>
+  <circle cx="240" cy="280" r="40" stroke="#ffba57" stroke-width="2"/>
+</g>
+<path d="M470 110 H1090" stroke="#48e8ff" stroke-opacity="0.35" stroke-width="2"/>
+<text x="470" y="180" fill="#d8fbff" font-family="Consolas, monospace" font-size="56">UNSC / ONI ARCHIVE</text>
+<text x="470" y="230" fill="#81b8c1" font-family="Consolas, monospace" font-size="22">Humanity / Colonies / ONI / SPARTAN programs / Fleet war</text>
+<text x="470" y="305" fill="#9dffcf" font-family="Consolas, monospace" font-size="18">ARCHIVE CLASS: HUMAN CIVIL-MILITARY RECORD</text>
+<rect x="470" y="335" width="220" height="42" stroke="#48e8ff" fill="#0a1a23"/>
+<text x="494" y="362" fill="#48e8ff" font-family="Consolas, monospace" font-size="18">SECTOR // UNSC-ONI</text>
+
+</svg>

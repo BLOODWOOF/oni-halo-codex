@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONI Archive Terminal // Halo Lore Encyclopedia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="scanlines"></div>
+
+  <section id="boot" class="boot" aria-label="ONI terminal boot screen">
+    <div class="boot-card">
+      <div class="boot-brand-strip">
+        <img src="assets/oni-seal.png" alt="Office of Naval Intelligence seal" class="boot-mark" />
+        <img src="assets/oni-eagle-banner.png" alt="Alternate ONI eagle, globe, and banner mark" class="boot-mark boot-mark-alt" />
+      </div>
+      <div class="boot-kicker">UNSC OFFICE OF NAVAL INTELLIGENCE</div>
+      <h1>SECTION III ARCHIVAL TERMINAL</h1>
+      <div class="boot-subline">UNOFFICIAL FAN ARCHIVE // CORE CONTINUITY // PUBLIC ACCESS NODE</div>
+      <pre id="bootText" class="boot-text"></pre>
+      <button id="enterBtn" class="enter-btn">ENTER ARCHIVE</button>
+    </div>
+  </section>
+
+  <div class="shell">
+    <header class="topbar">
+      <div class="title-wrap">
+        <div class="brand-mark-wrap">
+          <img src="assets/oni-seal.png" alt="Office of Naval Intelligence seal" class="brand-mark seal-mark" />
+          <img src="assets/oni-eagle-banner.png" alt="Alternate ONI eagle, globe, and banner mark" class="brand-mark eagle-mark" />
+        </div>
+        <div>
+          <div class="eyebrow">UNSC // OFFICE OF NAVAL INTELLIGENCE</div>
+          <h1>ONI Archive Terminal</h1>
+          <div class="sub-eyebrow">PUBLIC ARCHIVE NODE // UNOFFICIAL FAN REFERENCE DATABASE</div>
+        </div>
+      </div>
+      <div class="system-readout">
+        <span id="clock">00:00:00</span>
+        <span>CLEARANCE: SECTION III</span>
+        <span>STATUS: ONLINE</span>
+      </div>
+    </header>
+
+    <main class="terminal-grid">
+      <aside class="sidebar">
+        <div class="symbol-panel" aria-label="ONI symbol panel">
+          <div class="sidebar-title symbol-panel-title">IDENT MARKS</div>
+          <div class="symbol-grid">
+            <figure class="symbol-card">
+              <img src="assets/oni-seal.png" alt="Seal of the Office of Naval Intelligence" />
+              <figcaption>PRIMARY ONI SEAL</figcaption>
+            </figure>
+            <figure class="symbol-card">
+              <img src="assets/oni-eagle-banner.png" alt="ONI eagle, globe, and banner derived logo" />
+              <figcaption>EAGLE-GLOBE-BANNER VARIANT</figcaption>
+            </figure>
+            <figure class="symbol-card classified-card">
+              <img src="assets/oni-classified.png" alt="ONI classified placard variant" />
+              <figcaption>CLASSIFIED PLACARD</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="search-wrap">
+          <label for="searchInput">ARCHIVE SEARCH</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Search files, factions, eras, ships..." />
+          <div class="hint">Ctrl / Cmd + K to focus</div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <nav class="category-list" id="categoryList" aria-label="Archive categories"></nav>
+
+        <div class="sidebar-title">FILES</div>
+        <nav class="file-list" id="fileList" aria-label="Archive files"></nav>
+      </aside>
+
+      <section class="reader">
+        <div class="reader-toolbar">
+          <div class="crumbs" id="crumbs">ARCHIVE / INITIALIZING</div>
+          <div class="toolbar-actions">
+            <button id="timelineBtn" title="Open master timeline">Timeline</button>
+            <button id="randomBtn" title="Open a random file">Random File</button>
+            <button id="copyRefBtn" title="Copy current file reference">Copy Ref</button>
+          </div>
+        </div>
+
+        <article class="document-panel">
+          <section class="visual-panel" id="visualPanel" aria-label="Archive visuals"></section>
+          <div class="doc-meta" id="docMeta"></div>
+          <h2 id="docTitle">Loading archive...</h2>
+          <div class="outline" id="outline"></div>
+          <div class="document-body" id="documentBody"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="app-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

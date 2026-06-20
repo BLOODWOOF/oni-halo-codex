@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" fill="none">
+<defs>
+  <linearGradient id="bggrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#07131a"/>
+    <stop offset="100%" stop-color="#03080c"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="500" fill="url(#bggrad)"/>
+<rect x="18" y="18" width="1164" height="464" stroke="#48e8ff" stroke-opacity="0.4"/>
+
+<g opacity="0.18">
+  <path d="M140 130 Q250 70 360 130 Q400 240 360 350 Q250 430 140 350 Q100 240 140 130Z" stroke="#48e8ff" stroke-width="2"/>
+  <path d="M200 150 Q250 115 300 150 Q325 240 300 330 Q250 365 200 330 Q175 240 200 150Z" stroke="#ffba57" stroke-width="1.8"/>
+  <circle cx="250" cy="240" r="26" stroke="#9dffcf" stroke-width="1.6"/>
+</g>
+<path d="M470 110 H1090" stroke="#48e8ff" stroke-opacity="0.35" stroke-width="2"/>
+<text x="470" y="180" fill="#d8fbff" font-family="Consolas, monospace" font-size="56">COVENANT DOSSIER</text>
+<text x="470" y="230" fill="#81b8c1" font-family="Consolas, monospace" font-size="22">Prophets / Sangheili / Great Schism / Warfronts</text>
+<text x="470" y="305" fill="#9dffcf" font-family="Consolas, monospace" font-size="18">ARCHIVE CLASS: THEOCRATIC IMPERIAL COMPLEX</text>
+<rect x="470" y="335" width="228" height="42" stroke="#48e8ff" fill="#0a1a23"/>
+<text x="494" y="362" fill="#48e8ff" font-family="Consolas, monospace" font-size="18">SECTOR // COVENANT</text>
+
+</svg>
