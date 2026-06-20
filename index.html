@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ONI Archive Terminal // Halo Lore Encyclopedia</title>
+  <title>ONI Archive // Halo Codex</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -33,7 +33,7 @@
         </div>
         <div>
           <div class="eyebrow">UNSC // OFFICE OF NAVAL INTELLIGENCE</div>
-          <h1>ONI Archive Terminal</h1>
+          <h1>ONI Archive // Halo Codex</h1>
           <div class="sub-eyebrow">PUBLIC ARCHIVE NODE // UNOFFICIAL FAN REFERENCE DATABASE</div>
         </div>
       </div>
@@ -46,23 +46,6 @@
 
     <main class="terminal-grid">
       <aside class="sidebar">
-        <div class="symbol-panel" aria-label="ONI symbol panel">
-          <div class="sidebar-title symbol-panel-title">IDENT MARKS</div>
-          <div class="symbol-grid">
-            <figure class="symbol-card">
-              <img src="assets/oni-seal.png" alt="Seal of the Office of Naval Intelligence" />
-              <figcaption>PRIMARY ONI SEAL</figcaption>
-            </figure>
-            <figure class="symbol-card">
-              <img src="assets/oni-eagle-banner.png" alt="ONI eagle, globe, and banner derived logo" />
-              <figcaption>EAGLE-GLOBE-BANNER VARIANT</figcaption>
-            </figure>
-            <figure class="symbol-card classified-card">
-              <img src="assets/oni-classified.png" alt="ONI classified placard variant" />
-              <figcaption>CLASSIFIED PLACARD</figcaption>
-            </figure>
-          </div>
-        </div>
 
         <div class="search-wrap">
           <label for="searchInput">ARCHIVE SEARCH</label>
@@ -88,7 +71,8 @@
           </div>
         </div>
 
-        <article class="document-panel">
+        <article class="document-panel" id="documentPanel">
+          <div class="lock-overlay" id="lockOverlay" hidden></div>
           <section class="visual-panel" id="visualPanel" aria-label="Archive visuals"></section>
           <div class="doc-meta" id="docMeta"></div>
           <h2 id="docTitle">Loading archive...</h2>

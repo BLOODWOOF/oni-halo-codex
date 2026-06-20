@@ -3,6 +3,8 @@ const entries = data.entries;
 let selectedCategory = 'All Files';
 let currentId = null;
 let currentSearch = '';
+const unlockedDocs = new Set(JSON.parse(localStorage.getItem('oni-unlocked-docs') || '[]'));
+
 
 const $ = (id) => document.getElementById(id);
 
@@ -227,6 +229,58 @@ function highlight(safeHtml, query) {
 
 
 
+
+function saveUnlockedDocs() {
+  localStorage.setItem('oni-unlocked-docs', JSON.stringify(Array.from(unlockedDocs)));
+}
+
+function isClassifiedDoc(e) {
+  return e.classification !== 'DECLASSIFIED INDEX';
+}
+
+function renderLockOverlay(e) {
+  const overlay = $('lockOverlay');
+  const panel = $('documentPanel');
+  if (!overlay || !panel) return;
+  if (!isClassifiedDoc(e) || unlockedDocs.has(e.id)) {
+    overlay.hidden = true;
+    overlay.innerHTML = '';
+    panel.classList.remove('locked');
+    return;
+  }
+  panel.classList.add('locked');
+  overlay.hidden = false;
+  overlay.innerHTML = `
+    <div class="lock-card">
+      <div class="eyebrow">SECTION III ACCESS GATE</div>
+      <h3>${escapeHtml(e.classification)}</h3>
+      <p>This document is stored behind a simulated ONI access prompt for presentation purposes. Enter any passphrase to continue.</p>
+      <label class="lock-label" for="docPassword">ARCHIVE PASSPHRASE</label>
+      <div class="lock-input-row">
+        <input id="docPassword" type="password" autocomplete="off" placeholder="Enter passphrase" />
+        <button id="unlockDocBtn" type="button">Unlock File</button>
+      </div>
+      <div class="lock-help">Clearance check uses a themed front-end prompt only.</div>
+    </div>
+  `;
+  const input = $('docPassword');
+  const button = $('unlockDocBtn');
+  const unlock = () => {
+    if (!input.value.trim()) {
+      input.focus();
+      return;
+    }
+    unlockedDocs.add(e.id);
+    saveUnlockedDocs();
+    renderLockOverlay(e);
+  };
+  button.addEventListener('click', unlock);
+  input.addEventListener('keydown', (ev) => {
+    if (ev.key === 'Enter') unlock();
+  });
+  setTimeout(() => input.focus(), 0);
+}
+
 function getVisualBundle(e) {
   const v = e.volume ?? -1;
   const title = `${e.title} ${e.file}`.toLowerCase();
@@ -297,6 +351,7 @@ function openDoc(id) {
   $('crumbs').textContent = `ARCHIVE / ${e.category.toUpperCase()} / ${e.file}`;
   $('docTitle').textContent = e.title;
   renderVisualPanel(e);
+  renderLockOverlay(e);
   $('docMeta').innerHTML = `
     <span class="chip danger">${escapeHtml(e.classification)}</span>
     <span class="chip amber">${escapeHtml(e.file)}</span>
