@@ -27,3 +27,7 @@ https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/
 - This site is presented as an **unofficial fan archive**.
 - The public package intentionally excludes internal build notes and the raw `archive/` source folder.
 - If you want a custom domain later, add a `CNAME` file and configure it in GitHub Pages settings.
+
+
+## V2.2 visible check
+After uploading, the top-right status bar should show `BUILD: V2.2 PUBLIC`, and the reader should show `UPDATED BUILD CONFIRMED`. If you do not see those, GitHub Pages or your browser is still serving old files.
