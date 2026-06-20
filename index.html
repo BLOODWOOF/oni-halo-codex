@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ONI Archive // Halo Codex</title>
-  <link rel="stylesheet" href="style.v2.2-public.css" />
+  <title>SECTION III ARCHIVAL TERMINAL</title>
+  <link rel="stylesheet" href="terminal.css" />
 </head>
 <body>
   <div class="noise"></div>
@@ -18,9 +18,22 @@
       </div>
       <div class="boot-kicker">UNSC OFFICE OF NAVAL INTELLIGENCE</div>
       <h1>SECTION III ARCHIVAL TERMINAL</h1>
-      <div class="boot-subline">UNOFFICIAL FAN ARCHIVE // CORE CONTINUITY // PUBLIC ACCESS NODE</div>
-      <pre id="bootText" class="boot-text"></pre>
-      <button id="enterBtn" class="enter-btn">ENTER ARCHIVE</button>
+      <div class="boot-subline">RESTRICTED KNOWLEDGE NETWORK // ARCHIVE NODE 03</div>
+      <div class="boot-auth" id="bootAuth">
+        <div class="boot-auth-grid">
+          <div>
+            <label for="bootUser">USER DESIGNATION</label>
+            <input id="bootUser" type="text" autocomplete="off" spellcheck="false" placeholder="Enter user designation" />
+          </div>
+          <div>
+            <label for="bootPass">AUTHORIZATION KEY</label>
+            <input id="bootPass" type="password" autocomplete="off" placeholder="Enter authorization key" />
+          </div>
+        </div>
+        <button id="authBtn" class="enter-btn auth-btn">AUTHENTICATE</button>
+      </div>
+      <pre id="bootText" class="boot-text" hidden></pre>
+      <button id="enterBtn" class="enter-btn" hidden>ENTER ARCHIVE</button>
     </div>
   </section>
 
@@ -33,29 +46,25 @@
         </div>
         <div>
           <div class="eyebrow">UNSC // OFFICE OF NAVAL INTELLIGENCE</div>
-          <h1>ONI Archive // Halo Codex</h1>
-          <div class="sub-eyebrow">PUBLIC ARCHIVE NODE // UNOFFICIAL FAN REFERENCE DATABASE</div>
+          <h1>SECTION III ARCHIVAL TERMINAL</h1>
+          <div class="sub-eyebrow">STRATEGIC KNOWLEDGE DIVISION // SECTION III ACCESS</div>
         </div>
       </div>
       <div class="system-readout">
         <span id="clock">00:00:00</span>
         <span>CLEARANCE: SECTION III</span>
         <span>STATUS: ONLINE</span>
-        <span class="version-chip">BUILD: V2.2 PUBLIC</span>
       </div>
     </header>
 
     <main class="terminal-grid">
       <aside class="sidebar">
-
         <div class="search-wrap">
-          <label for="searchInput">ARCHIVE SEARCH</label>
-          <input id="searchInput" type="search" autocomplete="off" placeholder="Search files, factions, eras, ships..." />
-          <div class="hint">Ctrl / Cmd + K to focus</div>
+          <label for="searchInput">ARCHIVE QUERY</label>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="Search records, factions, eras, vessels..." />
         </div>
 
         <div class="stats" id="stats"></div>
-
         <nav class="category-list" id="categoryList" aria-label="Archive categories"></nav>
 
         <div class="sidebar-title">RECORDS</div>
@@ -67,13 +76,12 @@
           <div class="crumbs" id="crumbs">ARCHIVE / INITIALIZING</div>
           <div class="toolbar-actions">
             <button id="timelineBtn" title="Open master chronology">Timeline</button>
-            <button id="randomBtn" title="Open a random record">Random File</button>
-            <button id="copyRefBtn" title="Transmit current record reference">Copy Ref</button>
+            <button id="randomBtn" title="Open a random record">Random Record</button>
+            <button id="copyRefBtn" title="Transmit current record reference">Transmit Ref</button>
           </div>
         </div>
 
         <article class="document-panel" id="documentPanel">
-          <div class="changed-banner">UPDATED BUILD CONFIRMED // IDENT MARKS REMOVED // CLASSIFIED ACCESS PROMPT ENABLED</div>
           <div class="lock-overlay" id="lockOverlay" hidden></div>
           <section class="visual-panel" id="visualPanel" aria-label="Archive visuals"></section>
           <div class="doc-meta" id="docMeta"></div>
@@ -85,7 +93,7 @@
     </main>
   </div>
 
-  <script src="app-data.v2.2-public.js"></script>
-  <script src="app.v2.2-public.js"></script>
+  <script src="records.js"></script>
+  <script src="terminal.js"></script>
 </body>
 </html>
