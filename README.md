@@ -1,4 +1,4 @@
-# ONI Archive // Halo Codex
+# Section III Archival Terminal
 
 Public, static Halo lore reference site styled like an ONI terminal.
 
